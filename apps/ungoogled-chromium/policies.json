@@ -25,10 +25,6 @@
       "file://*",
       "chrome://policy"
   ],
-  "ExtensionInstallAllowlist": [
-      "cjpalhdlnbpafiamejdnhcphjbkeiagm",
-      "mnjggcdmjocbbbhaepdhchncahnbgone"
-  ],
   "ExtensionInstallBlocklist": [
       "*"
   ]
