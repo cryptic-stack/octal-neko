@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ghcr.io/m1k1o/neko/base:latest
+ARG BASE_IMAGE=ghcr.io/cryptic-stack/ocatl-neko/base:latest
 FROM $BASE_IMAGE
 
 ARG SRC_URL="https://cdn1.waterfox.net/waterfox/releases/latest/linux"

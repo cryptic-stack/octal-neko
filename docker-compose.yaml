@@ -1,6 +1,6 @@
 services:
   neko:
-    image: "ghcr.io/m1k1o/neko/firefox:latest"
+    image: "ghcr.io/cryptic-stack/ocatl-neko/firefox:latest"
     restart: "unless-stopped"
     shm_size: "2gb"
     ports:
