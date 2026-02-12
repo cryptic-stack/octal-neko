@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ghcr.io/cryptic-stack/ocatl-neko/base:latest
+ARG BASE_IMAGE=ghcr.io/cryptic-stack/octal-neko/base:latest
 FROM $BASE_IMAGE
 
 RUN set -eux; apt-get update; \
@@ -22,3 +22,4 @@ COPY supervisord.conf /etc/neko/supervisord/brave.conf
 COPY --chown=neko preferences.json /home/neko/.config/brave/Default/Preferences
 COPY policies.json /etc/brave/policies/managed/policies.json
 COPY openbox.xml /etc/neko/openbox.xml
+

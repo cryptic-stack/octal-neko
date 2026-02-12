@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ghcr.io/cryptic-stack/ocatl-neko/base:latest
+ARG BASE_IMAGE=ghcr.io/cryptic-stack/octal-neko/base:latest
 FROM $BASE_IMAGE
 
 ARG API_URL="https://api.github.com/repos/macchrome/linchrome/releases/latest"
@@ -55,3 +55,4 @@ COPY supervisord.conf /etc/neko/supervisord/ungoogled-chromium.conf
 COPY preferences.json /usr/lib/chromium/master_preferences
 COPY policies.json /etc/chromium/policies/managed/policies.json
 COPY openbox.xml /etc/neko/openbox.xml
+

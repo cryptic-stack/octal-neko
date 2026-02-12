@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ghcr.io/cryptic-stack/ocatl-neko/base:latest
+ARG BASE_IMAGE=ghcr.io/cryptic-stack/octal-neko/base:latest
 FROM $BASE_IMAGE
 
 #
@@ -54,3 +54,4 @@ COPY autoconfig.js /usr/lib/firefox/defaults/pref/autoconfig.js
 COPY policies.json /usr/lib/firefox/distribution/policies.json
 COPY --chown=neko profiles.ini /home/neko/.mozilla/firefox/profiles.ini
 COPY openbox.xml /etc/neko/openbox.xml
+

@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ghcr.io/cryptic-stack/ocatl-neko/nvidia-base:latest
+ARG BASE_IMAGE=ghcr.io/cryptic-stack/octal-neko/nvidia-base:latest
 FROM $BASE_IMAGE
 
 ARG SRC_URL="https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US"
@@ -33,3 +33,4 @@ COPY autoconfig.js /usr/lib/firefox/defaults/pref/autoconfig.js
 COPY policies.json /usr/lib/firefox/distribution/policies.json
 COPY --chown=neko profiles.ini /home/neko/.mozilla/firefox/profiles.ini
 COPY openbox.xml /etc/neko/openbox.xml
+

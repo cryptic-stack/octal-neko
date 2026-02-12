@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ghcr.io/cryptic-stack/ocatl-neko/base:latest
+ARG BASE_IMAGE=ghcr.io/cryptic-stack/octal-neko/base:latest
 FROM $BASE_IMAGE
 
 ARG API_URL="https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/"
@@ -22,3 +22,4 @@ COPY supervisord.conf /etc/neko/supervisord/microsoft-edge.conf
 COPY --chown=neko preferences.json /home/neko/.config/microsoft-edge/Default/Preferences
 COPY policies.json /etc/opt/edge/policies/managed/policies.json
 COPY openbox.xml /etc/neko/openbox.xml
+

@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ghcr.io/cryptic-stack/ocatl-neko/base:latest
+ARG BASE_IMAGE=ghcr.io/cryptic-stack/octal-neko/base:latest
 FROM $BASE_IMAGE
 
 ARG SRC_URL="https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US"
@@ -29,3 +29,4 @@ RUN set -eux; apt-get update; \
 #
 # copy configuation files
 COPY supervisord.conf /etc/neko/supervisord/xfce.conf
+

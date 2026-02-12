@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ghcr.io/cryptic-stack/ocatl-neko/base:latest
+ARG BASE_IMAGE=ghcr.io/cryptic-stack/octal-neko/base:latest
 FROM $BASE_IMAGE
 
 #
@@ -17,4 +17,5 @@ RUN set -eux; apt-get update; \
 #
 # copy configuation files
 COPY supervisord.conf /etc/neko/supervisord/xfce.conf
+
 

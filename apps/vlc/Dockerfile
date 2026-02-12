@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ghcr.io/cryptic-stack/ocatl-neko/base:latest
+ARG BASE_IMAGE=ghcr.io/cryptic-stack/octal-neko/base:latest
 FROM $BASE_IMAGE
 
 #
@@ -16,3 +16,4 @@ ENV VLC_MEDIA="/media"
 # copy configuation files
 COPY supervisord.conf /etc/neko/supervisord/vlc.conf
 COPY openbox.xml /etc/neko/openbox.xml
+

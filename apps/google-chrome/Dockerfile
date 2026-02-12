@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ghcr.io/cryptic-stack/ocatl-neko/base:latest
+ARG BASE_IMAGE=ghcr.io/cryptic-stack/octal-neko/base:latest
 FROM $BASE_IMAGE
 
 ARG SRC_URL="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
@@ -19,3 +19,4 @@ COPY supervisord.conf /etc/neko/supervisord/google-chrome.conf
 COPY --chown=neko preferences.json /home/neko/.config/google-chrome/Default/Preferences
 COPY policies.json /etc/opt/chrome/policies/managed/policies.json
 COPY openbox.xml /etc/neko/openbox.xml
+

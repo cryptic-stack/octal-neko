@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ghcr.io/cryptic-stack/ocatl-neko/base:latest
+ARG BASE_IMAGE=ghcr.io/cryptic-stack/octal-neko/base:latest
 FROM $BASE_IMAGE
 
 #
@@ -23,4 +23,5 @@ RUN kwriteconfig5 --file /home/neko/.config/kscreenlockerrc --group Daemon --key
 #
 # copy configuation files
 COPY supervisord.conf /etc/neko/supervisord/kde.conf
+
 

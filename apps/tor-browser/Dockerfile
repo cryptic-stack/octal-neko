@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ghcr.io/cryptic-stack/ocatl-neko/base:latest
+ARG BASE_IMAGE=ghcr.io/cryptic-stack/octal-neko/base:latest
 FROM $BASE_IMAGE
 
 #
@@ -24,3 +24,4 @@ RUN set -eux; apt-get update; \
 # copy configuation file
 COPY supervisord.conf /etc/neko/supervisord/tor-browser.conf
 COPY openbox.xml /etc/neko/openbox.xml
+

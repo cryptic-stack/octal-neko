@@ -1,12 +1,12 @@
-# OCATL
+# OCTAL
 
-OCATL is a security-focused, self-hosted remote browsing platform built for isolated sessions in Docker containers and streamed over WebRTC.
+OCTAL is a security-focused, self-hosted remote browsing platform built for isolated sessions in Docker containers and streamed over WebRTC.
 
-[![Release](https://img.shields.io/github/v/release/cryptic-stack/ocatl-neko)](https://github.com/cryptic-stack/ocatl-neko/releases)
-[![License](https://img.shields.io/github/license/cryptic-stack/ocatl-neko)](https://github.com/cryptic-stack/ocatl-neko/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/cryptic-stack/ocatl-neko)](https://hub.docker.com/r/cryptic-stack/ocatl-neko)
-[![Issues](https://img.shields.io/github/issues/cryptic-stack/ocatl-neko)](https://github.com/cryptic-stack/ocatl-neko/issues)
-[![Build](https://github.com/cryptic-stack/ocatl-neko/actions/workflows/dockerhub.yml/badge.svg)](https://github.com/cryptic-stack/ocatl-neko/actions/workflows/dockerhub.yml)
+[![Release](https://img.shields.io/github/v/release/cryptic-stack/octal-neko)](https://github.com/cryptic-stack/octal-neko/releases)
+[![License](https://img.shields.io/github/license/cryptic-stack/octal-neko)](https://github.com/cryptic-stack/octal-neko/blob/master/LICENSE)
+[![Docker Pulls](https://img.shields.io/docker/pulls/cryptic-stack/octal-neko)](https://hub.docker.com/r/cryptic-stack/octal-neko)
+[![Issues](https://img.shields.io/github/issues/cryptic-stack/octal-neko)](https://github.com/cryptic-stack/octal-neko/issues)
+[![Build](https://github.com/cryptic-stack/octal-neko/actions/workflows/dockerhub.yml/badge.svg)](https://github.com/cryptic-stack/octal-neko/actions/workflows/dockerhub.yml)
 
 ## Secure Isolated Browsing
 
@@ -26,46 +26,46 @@ OCATL is a security-focused, self-hosted remote browsing platform built for isol
 
 ## Project Scope
 
-OCATL can run full browsers, desktop environments (XFCE/KDE), and Linux applications (for example VLC/remmina) in the same isolation model.
+OCTAL can run full browsers, desktop environments (XFCE/KDE), and Linux applications (for example VLC/remmina) in the same isolation model.
 
-For room orchestration and API-driven room lifecycle management, use [ocatl-neko-rooms](https://github.com/cryptic-stack/ocatl-neko-rooms).
+For room orchestration and API-driven room lifecycle management, use [octal-neko-rooms](https://github.com/cryptic-stack/octal-neko-rooms).
 
 ## Upstream Compatibility
 
-OCATL is maintained as a hardened fork of [m1k1o/neko](https://github.com/m1k1o/neko). Upstream docs remain useful for general architecture and runtime configuration.
+OCTAL is maintained as a hardened fork of [m1k1o/neko](https://github.com/m1k1o/neko). Upstream docs remain useful for general architecture and runtime configuration.
 
 ### Supported browsers
 
 <div align="center">
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#firefox">
-    <img src="https://neko.m1k1o.net/img/icons/firefox.svg" title="docker.io/cryptic-stack/ocatl-neko:firefox" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/firefox.svg" title="docker.io/cryptic-stack/octal-neko:firefox" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#tor-browser">
-    <img src="https://neko.m1k1o.net/img/icons/tor-browser.svg" title="docker.io/cryptic-stack/ocatl-neko:tor-browser" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/tor-browser.svg" title="docker.io/cryptic-stack/octal-neko:tor-browser" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#waterfox">
-    <img src="https://neko.m1k1o.net/img/icons/waterfox.svg" title="docker.io/cryptic-stack/ocatl-neko:waterfox" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/waterfox.svg" title="docker.io/cryptic-stack/octal-neko:waterfox" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#chromium">
-    <img src="https://neko.m1k1o.net/img/icons/chromium.svg" title="docker.io/cryptic-stack/ocatl-neko:chromium" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/chromium.svg" title="docker.io/cryptic-stack/octal-neko:chromium" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#google-chrome">
-    <img src="https://neko.m1k1o.net/img/icons/google-chrome.svg" title="docker.io/cryptic-stack/ocatl-neko:google-chrome" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/google-chrome.svg" title="docker.io/cryptic-stack/octal-neko:google-chrome" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#ungoogled-chromium">
-    <img src="https://neko.m1k1o.net/img/icons/ungoogled-chromium.svg" title="docker.io/cryptic-stack/ocatl-neko:ungoogled-chromium" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/ungoogled-chromium.svg" title="docker.io/cryptic-stack/octal-neko:ungoogled-chromium" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#microsoft-edge">
-    <img src="https://neko.m1k1o.net/img/icons/microsoft-edge.svg" title="docker.io/cryptic-stack/ocatl-neko:microsoft-edge" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/microsoft-edge.svg" title="docker.io/cryptic-stack/octal-neko:microsoft-edge" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#brave">
-    <img src="https://neko.m1k1o.net/img/icons/brave.svg" title="docker.io/cryptic-stack/ocatl-neko:brave" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/brave.svg" title="docker.io/cryptic-stack/octal-neko:brave" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#vivaldi">
-    <img src="https://neko.m1k1o.net/img/icons/vivaldi.svg" title="docker.io/cryptic-stack/ocatl-neko:vivaldi" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/vivaldi.svg" title="docker.io/cryptic-stack/octal-neko:vivaldi" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#opera">
-    <img src="https://neko.m1k1o.net/img/icons/opera.svg" title="docker.io/cryptic-stack/ocatl-neko:opera" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/opera.svg" title="docker.io/cryptic-stack/octal-neko:opera" width="60" height="auto"/>
   </a>
 
   ... see [all available images](https://neko.m1k1o.net/docs/v3/installation/docker-images)
@@ -75,30 +75,30 @@ OCATL is maintained as a hardened fork of [m1k1o/neko](https://github.com/m1k1o/
 
 <div align="center">
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#xfce">
-    <img src="https://neko.m1k1o.net/img/icons/xfce.svg" title="docker.io/cryptic-stack/ocatl-neko:xfce" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/xfce.svg" title="docker.io/cryptic-stack/octal-neko:xfce" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#kde">
-    <img src="https://neko.m1k1o.net/img/icons/kde.svg" title="docker.io/cryptic-stack/ocatl-neko:kde" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/kde.svg" title="docker.io/cryptic-stack/octal-neko:kde" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#remmina">
-    <img src="https://neko.m1k1o.net/img/icons/remmina.svg" title="docker.io/cryptic-stack/ocatl-neko:remmina" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/remmina.svg" title="docker.io/cryptic-stack/octal-neko:remmina" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#vlc">
-    <img src="https://neko.m1k1o.net/img/icons/vlc.svg" title="docker.io/cryptic-stack/ocatl-neko:vlc" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/vlc.svg" title="docker.io/cryptic-stack/octal-neko:vlc" width="60" height="auto"/>
   </a>
 
   ... others in <a href="https://github.com/m1k1o/neko-apps">m1k1o/neko-apps</a>
 </div>
 
-### Why OCATL?
+### Why OCTAL?
 
-OCATL provides a security-first packaging and operations model for isolated remote browsing, while staying broadly compatible with the upstream ecosystem.
+OCTAL provides a security-first packaging and operations model for isolated remote browsing, while staying broadly compatible with the upstream ecosystem.
 
 ## Multiple rooms
 
-For room management software, visit [ocatl-neko-rooms](https://github.com/cryptic-stack/ocatl-neko-rooms).
+For room management software, visit [octal-neko-rooms](https://github.com/cryptic-stack/octal-neko-rooms).
 
-It also offers [Zero-knowledge installation (with HTTPS)](https://github.com/cryptic-stack/ocatl-neko-rooms/?tab=readme-ov-file#zero-knowledge-installation-with-https).
+It also offers [Zero-knowledge installation (with HTTPS)](https://github.com/cryptic-stack/octal-neko-rooms/?tab=readme-ov-file#zero-knowledge-installation-with-https).
 
 ## Documentation
 
@@ -115,6 +115,7 @@ Upstream documentation is available at [neko.m1k1o.net](https://neko.m1k1o.net/)
 ## How to Contribute
 
 Contributions are welcome! Check the [Contributing Guide](https://neko.m1k1o.net/contributing) for details.
+
 
 
 

@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ghcr.io/cryptic-stack/ocatl-neko/base:latest
+ARG BASE_IMAGE=ghcr.io/cryptic-stack/octal-neko/base:latest
 FROM $BASE_IMAGE
 
 ARG API_URL="https://download5.operacdn.com/pub/opera/desktop/"
@@ -37,4 +37,5 @@ RUN set -eux; apt-get update; \
 # copy configuation files
 COPY supervisord.conf /etc/neko/supervisord/opera.conf
 COPY openbox.xml /etc/neko/openbox.xml
+
 

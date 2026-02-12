@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ghcr.io/cryptic-stack/ocatl-neko/base:latest
+ARG BASE_IMAGE=ghcr.io/cryptic-stack/octal-neko/base:latest
 FROM $BASE_IMAGE
 
 COPY ./widevinecdm.sh /widevine.sh
@@ -32,3 +32,4 @@ COPY supervisord.conf /etc/neko/supervisord/chromium.conf
 COPY --chown=neko preferences.json /home/neko/.config/chromium/Default/Preferences
 COPY policies.json /etc/chromium/policies/managed/policies.json
 COPY openbox.xml /etc/neko/openbox.xml
+

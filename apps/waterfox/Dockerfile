@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=ghcr.io/cryptic-stack/ocatl-neko/base:latest
+ARG BASE_IMAGE=ghcr.io/cryptic-stack/octal-neko/base:latest
 FROM $BASE_IMAGE
 
 ARG SRC_URL="https://cdn1.waterfox.net/waterfox/releases/latest/linux"
@@ -33,3 +33,4 @@ COPY autoconfig.js /usr/lib/waterfox/defaults/pref/autoconfig.js
 COPY policies.json /usr/lib/waterfox/distribution/policies.json
 COPY --chown=neko profiles.ini /home/neko/.waterfox/profiles.ini
 COPY openbox.xml /etc/neko/openbox.xml
+
