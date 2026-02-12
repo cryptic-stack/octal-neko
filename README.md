@@ -141,9 +141,9 @@ Compared to clientless remote desktop gateway (e.g. [Apache Guacamole](https://g
 
 ### Why neko?
 
-I like cats 🐱 (`Neko` is the Japanese word for cat), I'm a weeb/nerd.
 
-***But why the cat butt?*** Because cats are *assholes*, but you love them anyways.
+n.eko started as a collaborative virtual browser project and evolved into a broader remote collaboration platform.
+The name has been kept for continuity across the ecosystem and existing deployments.
 
 ## Multiple rooms
 
@@ -170,3 +170,4 @@ Contributions are welcome! Check the [Contributing Guide](https://neko.m1k1o.net
 ## Support
 
 If you find Neko useful, consider supporting the project via [GitHub Sponsors](https://github.com/sponsors/m1k1o).
+
