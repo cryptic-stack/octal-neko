@@ -7,6 +7,15 @@ on:
     paths-ignore:
       - 'webpage/**'
   workflow_dispatch:
+    inputs:
+      target:
+        description: "Build target"
+        required: true
+        default: "base"
+        type: choice
+        options:
+          - base
+          - all
   #
   # Run this action periodically to keep browsers up-to-date
   # even if there is no activity in this repo.
@@ -31,7 +40,7 @@ jobs:
     #
     # do not run on forks
     #
-    if: github.repository_owner == 'cryptic-stack' && vars.ENABLE_DOCKERHUB == 'true'
+    if: github.repository_owner == 'cryptic-stack' && vars.ENABLE_DOCKERHUB == 'true' && (github.event_name != 'workflow_dispatch' || inputs.target == 'base' || inputs.target == 'all')
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -74,7 +83,7 @@ jobs:
     #
     # do not run on forks
     #
-    if: github.repository_owner == 'cryptic-stack' && vars.ENABLE_DOCKERHUB == 'true'
+    if: github.repository_owner == 'cryptic-stack' && vars.ENABLE_DOCKERHUB == 'true' && (github.event_name != 'workflow_dispatch' || inputs.target == 'all')
     needs: build-base
     strategy:
       # Will build all images even if some fail.
@@ -135,7 +144,7 @@ jobs:
   build-base-intel:
     name: Base Image (Intel)
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'cryptic-stack' && vars.ENABLE_DOCKERHUB == 'true'
+    if: github.repository_owner == 'cryptic-stack' && vars.ENABLE_DOCKERHUB == 'true' && (github.event_name != 'workflow_dispatch' || inputs.target == 'all')
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -173,7 +182,7 @@ jobs:
   build-app-intel:
     name: App Image (Intel)
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'cryptic-stack' && vars.ENABLE_DOCKERHUB == 'true'
+    if: github.repository_owner == 'cryptic-stack' && vars.ENABLE_DOCKERHUB == 'true' && (github.event_name != 'workflow_dispatch' || inputs.target == 'all')
     needs: build-base-intel
     strategy:
       fail-fast: false
@@ -230,7 +239,7 @@ jobs:
   build-base-nvidia:
     name: Base Image (Nvidia)
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'cryptic-stack' && vars.ENABLE_DOCKERHUB == 'true'
+    if: github.repository_owner == 'cryptic-stack' && vars.ENABLE_DOCKERHUB == 'true' && (github.event_name != 'workflow_dispatch' || inputs.target == 'all')
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -268,7 +277,7 @@ jobs:
   build-app-nvidia:
     name: App Image (Nvidia)
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'cryptic-stack' && vars.ENABLE_DOCKERHUB == 'true'
+    if: github.repository_owner == 'cryptic-stack' && vars.ENABLE_DOCKERHUB == 'true' && (github.event_name != 'workflow_dispatch' || inputs.target == 'all')
     needs: build-base-nvidia
     strategy:
       fail-fast: false
