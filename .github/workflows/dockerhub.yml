@@ -30,8 +30,8 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  DOCKER_IMAGE: ${{ vars.DOCKER_IMAGE || 'docker.io/cryptic-stack/octal-neko' }}
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME || vars.DOCKERHUB_USERNAME || github.actor }}
+  DOCKER_IMAGE: ${{ vars.DOCKER_IMAGE || format('docker.io/{0}/octal-neko', secrets.DOCKERHUB_USERNAME || vars.DOCKERHUB_USERNAME || github.actor) }}
 
 jobs:
   build-base:
