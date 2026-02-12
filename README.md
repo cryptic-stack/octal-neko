@@ -1,37 +1,34 @@
 <div align="center">
-  <a href="https://github.com/m1k1o/neko" title="Neko's Github repository.">
+  <a href="https://github.com/cryptic-stack/ocatl-neko" title="OCATL Github repository.">
     <img src="https://neko.m1k1o.net/img/logo.png" width="400" height="auto"/>
   </a>
   <p align="center">
-    <a href="https://github.com/m1k1o/neko/releases">
-      <img src="https://img.shields.io/github/v/release/m1k1o/neko" alt="release">
+    <a href="https://github.com/cryptic-stack/ocatl-neko/releases">
+      <img src="https://img.shields.io/github/v/release/cryptic-stack/ocatl-neko" alt="release">
     </a>
-    <a href="https://github.com/m1k1o/neko/blob/master/LICENSE">
-      <img src="https://img.shields.io/github/license/m1k1o/neko" alt="license">
+    <a href="https://github.com/cryptic-stack/ocatl-neko/blob/master/LICENSE">
+      <img src="https://img.shields.io/github/license/cryptic-stack/ocatl-neko" alt="license">
     </a>
-    <a href="https://hub.docker.com/r/m1k1o/neko">
-      <img src="https://img.shields.io/docker/pulls/m1k1o/neko" alt="pulls">
+    <a href="https://hub.docker.com/r/cryptic-stack/ocatl-neko">
+      <img src="https://img.shields.io/docker/pulls/cryptic-stack/ocatl-neko" alt="pulls">
     </a>
-    <a href="https://github.com/m1k1o/neko/issues">
-      <img src="https://img.shields.io/github/issues/m1k1o/neko" alt="issues">
+    <a href="https://github.com/cryptic-stack/ocatl-neko/issues">
+      <img src="https://img.shields.io/github/issues/cryptic-stack/ocatl-neko" alt="issues">
     </a>
-    <a href="https://github.com/sponsors/m1k1o">
-      <img src="https://img.shields.io/badge/-sponsor-red" alt="issues">
+    <a href="https://github.com/cryptic-stack/ocatl-neko/actions">
+      <img src="https://github.com/cryptic-stack/ocatl-neko/actions/workflows/dockerhub.yml/badge.svg" alt="build">
     </a>
     <a href="https://discord.gg/3U6hWpC">
       <img src="https://discordapp.com/api/guilds/665851821906067466/widget.png" alt="Chat on discord">
-    </a>
-    <a href="https://hellogithub.com/repository/4536d4546af24196af3f08a023dfa007" target="_blank">
-      <img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=4536d4546af24196af3f08a023dfa007&claim_uid=0x19e4dJwD83aW2&theme=small" alt="Featured｜HelloGitHub" />
-    </a>
-    <a href="https://github.com/m1k1o/neko/actions">
-      <img src="https://github.com/m1k1o/neko/actions/workflows/ghcr.yml/badge.svg" alt="build">
     </a>
   </p>
   <img src="https://neko.m1k1o.net/img/intro.gif" width="650" height="auto"/>
 </div>
 
-# n.eko
+# OCATL (Fork of n.eko)
+
+This repository is a security-focused fork of [m1k1o/neko](https://github.com/m1k1o/neko), maintained as `cryptic-stack/ocatl-neko`.
+Container images are published from this fork to Docker Hub under `docker.io/cryptic-stack/ocatl-neko`.
 
 Welcome to Neko, a self-hosted virtual browser that runs in Docker and uses WebRTC technology. Neko is a powerful tool that allows you to **run a fully-functional browser in a virtual environment**, giving you the ability to **access the internet securely and privately from anywhere**. With Neko, you can browse the web, **run applications**, and perform other tasks just as you would on a regular browser, all within a **secure and isolated environment**. Whether you are a developer looking to test web applications, a **privacy-conscious user seeking a secure browsing experience**, or simply someone who wants to take advantage of the **convenience and flexibility of a virtual browser**, Neko is the perfect solution.
 
@@ -41,9 +38,9 @@ Neko is also a great tool for **hosting watch parties** and interactive presenta
 
 ## About
 
-This app uses WebRTC to stream a desktop inside of a docker container, original author made this because [rabb.it](https://en.wikipedia.org/wiki/Rabb.it) went under and his internet could not handle streaming and discord kept crashing when his friend attempted to. He just wanted to watch anime with his friends ლ(ಠ益ಠლ) so he started digging throughout the internet and found a few *kinda* clones, but none of them had the virtual browser, then he found [Turtus](https://github.com/Khauri/Turtus) and he was able to figure out the rest.
+This app uses WebRTC to stream a desktop running inside a Docker container. It started as a collaborative browser project and evolved into a broader remote collaboration platform that can run browsers, desktop environments, and Linux applications.
 
-Then I found [this](https://github.com/nurdism/neko) project and started to dig into it. I really liked the idea of having collaborative browser browsing together with multiple people, so I created a fork. Initially, I wanted to merge my changes to the upstream repository, but the original author did not have time for this project anymore and it got eventually archived.
+For project history and upstream context, see [m1k1o/neko](https://github.com/m1k1o/neko).
 
 ## Use-cases and comparison
 
@@ -61,7 +58,7 @@ Primary use case is connecting with multiple people, leveraging real time synchr
 - **Support/Teaching** - interactively guiding people in controlled environment.
 - **Embed anything** - embed virtual browser in your web app - open source alternative to [hyperbeam API](https://hyperbeam.com/).
   - open any third-party website or application, synchronize audio and video flawlessly among multiple participants.
-  - request rooms using API with [neko-rooms](https://github.com/m1k1o/neko-rooms).
+  - request rooms using API with [ocatl-neko-rooms](https://github.com/cryptic-stack/ocatl-neko-rooms).
 
 Other use cases that benefit from single-user:
 - **Personal workspace** - streaming containerized apps and desktops to end-users - similar to [kasm](https://www.kasmweb.com/).
@@ -87,34 +84,34 @@ Compared to clientless remote desktop gateway (e.g. [Apache Guacamole](https://g
 
 <div align="center">
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#firefox">
-    <img src="https://neko.m1k1o.net/img/icons/firefox.svg" title="ghcr.io/m1k1o/neko/firefox" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/firefox.svg" title="docker.io/cryptic-stack/ocatl-neko:firefox" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#tor-browser">
-    <img src="https://neko.m1k1o.net/img/icons/tor-browser.svg" title="ghcr.io/m1k1o/neko/tor-browser" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/tor-browser.svg" title="docker.io/cryptic-stack/ocatl-neko:tor-browser" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#waterfox">
-    <img src="https://neko.m1k1o.net/img/icons/waterfox.svg" title="ghcr.io/m1k1o/neko/waterfox" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/waterfox.svg" title="docker.io/cryptic-stack/ocatl-neko:waterfox" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#chromium">
-    <img src="https://neko.m1k1o.net/img/icons/chromium.svg" title="ghcr.io/m1k1o/neko/chromium" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/chromium.svg" title="docker.io/cryptic-stack/ocatl-neko:chromium" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#google-chrome">
-    <img src="https://neko.m1k1o.net/img/icons/google-chrome.svg" title="ghcr.io/m1k1o/neko/google-chrome" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/google-chrome.svg" title="docker.io/cryptic-stack/ocatl-neko:google-chrome" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#ungoogled-chromium">
-    <img src="https://neko.m1k1o.net/img/icons/ungoogled-chromium.svg" title="ghcr.io/m1k1o/neko/google-chrome" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/ungoogled-chromium.svg" title="docker.io/cryptic-stack/ocatl-neko:ungoogled-chromium" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#microsoft-edge">
-    <img src="https://neko.m1k1o.net/img/icons/microsoft-edge.svg" title="ghcr.io/m1k1o/neko/microsoft-edge" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/microsoft-edge.svg" title="docker.io/cryptic-stack/ocatl-neko:microsoft-edge" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#brave">
-    <img src="https://neko.m1k1o.net/img/icons/brave.svg" title="ghcr.io/m1k1o/neko/brave" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/brave.svg" title="docker.io/cryptic-stack/ocatl-neko:brave" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#vivaldi">
-    <img src="https://neko.m1k1o.net/img/icons/vivaldi.svg" title="ghcr.io/m1k1o/neko/vivaldi" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/vivaldi.svg" title="docker.io/cryptic-stack/ocatl-neko:vivaldi" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#opera">
-    <img src="https://neko.m1k1o.net/img/icons/opera.svg" title="ghcr.io/m1k1o/neko/opera" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/opera.svg" title="docker.io/cryptic-stack/ocatl-neko:opera" width="60" height="auto"/>
   </a>
 
   ... see [all available images](https://neko.m1k1o.net/docs/v3/installation/docker-images)
@@ -124,16 +121,16 @@ Compared to clientless remote desktop gateway (e.g. [Apache Guacamole](https://g
 
 <div align="center">
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#xfce">
-    <img src="https://neko.m1k1o.net/img/icons/xfce.svg" title="ghcr.io/m1k1o/neko/xfce" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/xfce.svg" title="docker.io/cryptic-stack/ocatl-neko:xfce" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#kde">
-    <img src="https://neko.m1k1o.net/img/icons/kde.svg" title="ghcr.io/m1k1o/neko/kde" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/kde.svg" title="docker.io/cryptic-stack/ocatl-neko:kde" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#remmina">
-    <img src="https://neko.m1k1o.net/img/icons/remmina.svg" title="ghcr.io/m1k1o/neko/remmina" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/remmina.svg" title="docker.io/cryptic-stack/ocatl-neko:remmina" width="60" height="auto"/>
   </a>
   <a href="https://neko.m1k1o.net/docs/v3/installation/docker-images#vlc">
-    <img src="https://neko.m1k1o.net/img/icons/vlc.svg" title="ghcr.io/m1k1o/neko/vlc" width="60" height="auto"/>
+    <img src="https://neko.m1k1o.net/img/icons/vlc.svg" title="docker.io/cryptic-stack/ocatl-neko:vlc" width="60" height="auto"/>
   </a>
 
   ... others in <a href="https://github.com/m1k1o/neko-apps">m1k1o/neko-apps</a>
@@ -147,13 +144,13 @@ The name has been kept for continuity across the ecosystem and existing deployme
 
 ## Multiple rooms
 
-For neko room management software, visit [neko-rooms](https://github.com/m1k1o/neko-rooms).
+For neko room management software, visit [ocatl-neko-rooms](https://github.com/cryptic-stack/ocatl-neko-rooms).
 
-It also offers [Zero-knowledge installation (with HTTPS)](https://github.com/m1k1o/neko-rooms/?tab=readme-ov-file#zero-knowledge-installation-with-https).
+It also offers [Zero-knowledge installation (with HTTPS)](https://github.com/cryptic-stack/ocatl-neko-rooms/?tab=readme-ov-file#zero-knowledge-installation-with-https).
 
 ## Documentation
 
-Full documentation is available at [neko.m1k1o.net](https://neko.m1k1o.net/). Key sections include:
+Upstream documentation is available at [neko.m1k1o.net](https://neko.m1k1o.net/). Key sections include:
 
 - [Migration from V2](https://neko.m1k1o.net/docs/v3/migration-from-v2)
 - [Getting Started](https://neko.m1k1o.net/docs/v3/quick-start)
@@ -169,5 +166,7 @@ Contributions are welcome! Check the [Contributing Guide](https://neko.m1k1o.net
 
 ## Support
 
-If you find Neko useful, consider supporting the project via [GitHub Sponsors](https://github.com/sponsors/m1k1o).
+If you find Neko useful, consider supporting the upstream project via [GitHub Sponsors](https://github.com/sponsors/m1k1o).
+
+
 
