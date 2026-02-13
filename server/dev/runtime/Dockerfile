@@ -18,8 +18,8 @@ RUN set -eux; apt-get update; \
     ln -s /usr/lib/firefox/firefox /usr/bin/firefox; \
     #
     # add user to sudoers
-    usermod -aG sudo neko; \
-    echo "neko:neko" | chpasswd; \
+    usermod -aG sudo octal; \
+    echo "octal:octal" | chpasswd; \
     echo "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers; \
     # clean up
     apt-get --purge autoremove -y xz-utils; \

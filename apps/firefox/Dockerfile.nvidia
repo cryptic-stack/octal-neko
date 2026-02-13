@@ -17,8 +17,8 @@ RUN set -eux; apt-get update; \
     ln -s /usr/lib/firefox/firefox /usr/bin/firefox; \
     #
     # create a profile directory
-    mkdir -p /home/neko/.mozilla/firefox/profile.default/extensions; \
-    chown -R neko:neko /home/neko/.mozilla/firefox/profile.default; \
+    mkdir -p /home/octal/.mozilla/firefox/profile.default/extensions; \
+    chown -R octal:octal /home/octal/.mozilla/firefox/profile.default; \
     #
     # clean up
     apt-get --purge autoremove -y xz-utils; \
@@ -31,6 +31,6 @@ COPY supervisord.nvidia.conf /etc/neko/supervisord/firefox.conf
 COPY neko.js /usr/lib/firefox/mozilla.cfg
 COPY autoconfig.js /usr/lib/firefox/defaults/pref/autoconfig.js
 COPY policies.json /usr/lib/firefox/distribution/policies.json
-COPY --chown=neko profiles.ini /home/neko/.mozilla/firefox/profiles.ini
+COPY --chown=octal profiles.ini /home/octal/.mozilla/firefox/profiles.ini
 COPY openbox.xml /etc/neko/openbox.xml
 

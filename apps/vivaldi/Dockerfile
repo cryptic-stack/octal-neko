@@ -34,7 +34,7 @@ RUN set -eux; apt-get update; \
 #
 # copy configuation files
 COPY supervisord.conf /etc/neko/supervisord/vivaldi-browser.conf
-COPY --chown=neko preferences.json /home/neko/.config/vivaldi/Default/Preferences
+COPY --chown=octal preferences.json /home/octal/.config/vivaldi/Default/Preferences
 COPY policies.json /etc/opt/vivaldi/policies/managed/policies.json
 COPY openbox.xml /etc/neko/openbox.xml
 

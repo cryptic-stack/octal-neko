@@ -29,7 +29,7 @@ RUN set -eux; \
 #
 # copy configuation files
 COPY supervisord.conf /etc/neko/supervisord/chromium.conf
-COPY --chown=neko preferences.json /home/neko/.config/chromium/Default/Preferences
+COPY --chown=octal preferences.json /home/octal/.config/chromium/Default/Preferences
 COPY policies.json /etc/chromium/policies/managed/policies.json
 COPY openbox.xml /etc/neko/openbox.xml
 

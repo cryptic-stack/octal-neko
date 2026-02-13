@@ -1,7 +1,7 @@
 ARG BASE_IMAGE=ghcr.io/cryptic-stack/octal-neko/nvidia-base:latest
 FROM $BASE_IMAGE
 
-# latest working version with EGL: 111.0.5563.146, revert when resolved
+#Â latest working version with EGL: 111.0.5563.146, revert when resolved
 # 112.0.5615.49 fails: https://github.com/VirtualGL/virtualgl/issues/229
 # google does not provide a direct link to the deb file anymore
 # ARG SRC_URL="https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_111.0.5563.146-1_amd64.deb"
@@ -20,7 +20,7 @@ RUN set -eux; apt-get update; \
 #
 # copy configuation files
 COPY supervisord.nvidia.conf /etc/neko/supervisord/google-chrome.conf
-COPY --chown=neko preferences.json /home/neko/.config/google-chrome/Default/Preferences
+COPY --chown=octal preferences.json /home/octal/.config/google-chrome/Default/Preferences
 COPY policies.json /etc/opt/chrome/policies/managed/policies.json
 COPY openbox.xml /etc/neko/openbox.xml
 

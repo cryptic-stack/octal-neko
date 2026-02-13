@@ -8,7 +8,7 @@ COPY ./widevinecdm.sh /widevine.sh
 RUN set -eux; \
     apt-get update; \
     apt-get install -y --no-install-recommends software-properties-common; \
-    # chromium-browser from default repo needs snap to be installed
+    #Â chromium-browser from default repo needs snap to be installed
     # and nvidia base is ubuntu not debian
     add-apt-repository ppa:system76/pop; \
     apt-get update; \
@@ -27,7 +27,7 @@ RUN set -eux; \
 #
 # copy configuation files
 COPY supervisord.nvidia.conf /etc/neko/supervisord/chromium.conf
-COPY --chown=neko preferences.json /home/neko/.config/chromium/Default/Preferences
+COPY --chown=octal preferences.json /home/octal/.config/chromium/Default/Preferences
 COPY policies.json /etc/chromium/policies/managed/policies.json
 COPY openbox.xml /etc/neko/openbox.xml
 

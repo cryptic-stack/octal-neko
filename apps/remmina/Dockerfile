@@ -13,8 +13,8 @@ RUN set -eux; apt-get update; \
 
 # copy configuation files
 COPY supervisord.conf /etc/neko/supervisord/remmina.conf
-COPY --chown=neko remmina.pref /home/neko/.config/remmina/remmina.pref
-COPY --chown=neko rdp.remmina spice.remmina vnc.remmina /home/neko/.local/share/remmina/
+COPY --chown=octal remmina.pref /home/octal/.config/remmina/remmina.pref
+COPY --chown=octal rdp.remmina spice.remmina vnc.remmina /home/octal/.local/share/remmina/
 COPY run-remmina.sh /usr/bin/run-remmina.sh
 ENV REMMINA_URL=
 ENV REMMINA_PROFILE=

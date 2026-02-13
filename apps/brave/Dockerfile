@@ -19,7 +19,7 @@ RUN set -eux; apt-get update; \
 #
 # copy configuation files
 COPY supervisord.conf /etc/neko/supervisord/brave.conf
-COPY --chown=neko preferences.json /home/neko/.config/brave/Default/Preferences
+COPY --chown=octal preferences.json /home/octal/.config/brave/Default/Preferences
 COPY policies.json /etc/brave/policies/managed/policies.json
 COPY openbox.xml /etc/neko/openbox.xml
 

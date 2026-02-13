@@ -17,8 +17,8 @@ RUN set -eux; apt-get update; \
     ln -s /usr/lib/waterfox/waterfox /usr/bin/waterfox; \
     #
     # create a profile directory
-    mkdir -p /home/neko/.waterfox/profile.default/extensions; \
-    chown -R neko:neko /home/neko/.waterfox/profile.default; \
+    mkdir -p /home/octal/.waterfox/profile.default/extensions; \
+    chown -R octal:octal /home/octal/.waterfox/profile.default; \
     #
     # clean up
     apt-get --purge autoremove -y xz-utils bzip2; \
@@ -31,6 +31,6 @@ COPY supervisord.conf /etc/neko/supervisord/waterfox.conf
 COPY neko.js /usr/lib/waterfox/mozilla.cfg
 COPY autoconfig.js /usr/lib/waterfox/defaults/pref/autoconfig.js
 COPY policies.json /usr/lib/waterfox/distribution/policies.json
-COPY --chown=neko profiles.ini /home/neko/.waterfox/profiles.ini
+COPY --chown=octal profiles.ini /home/octal/.waterfox/profiles.ini
 COPY openbox.xml /etc/neko/openbox.xml
 
