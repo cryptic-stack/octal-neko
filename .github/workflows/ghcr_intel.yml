@@ -38,6 +38,7 @@ jobs:
           - name: remmina
           - name: vlc
           - name: xfce
+          - name: xfce-netbird
           - name: kde
     with:
       name: ${{ matrix.name }}

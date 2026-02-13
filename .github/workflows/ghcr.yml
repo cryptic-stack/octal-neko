@@ -49,6 +49,8 @@ jobs:
             platforms: linux/amd64,linux/arm64,linux/arm/v7
           - name: xfce
             platforms: linux/amd64,linux/arm64,linux/arm/v7
+          - name: xfce-netbird
+            platforms: linux/amd64
           - name: kde
             platforms: linux/amd64,linux/arm64,linux/arm/v7
     with:

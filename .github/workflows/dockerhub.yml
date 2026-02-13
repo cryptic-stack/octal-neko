@@ -104,6 +104,7 @@ jobs:
           - remmina
           - vlc
           - xfce
+          - xfce-netbird
           - kde
     steps:
       - name: Checkout
@@ -200,6 +201,7 @@ jobs:
           - remmina
           - vlc
           - xfce
+          - xfce-netbird
           - kde
     steps:
       - name: Checkout
