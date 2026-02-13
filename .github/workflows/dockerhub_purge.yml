@@ -1,0 +1,77 @@
+name: Purge Docker Hub Tags
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: "Type PURGE to delete all tags in docker.io/<DOCKERHUB_USERNAME>/octal-neko"
+        required: true
+        default: ""
+        type: string
+      repository:
+        description: "Docker Hub repository name"
+        required: true
+        default: "octal-neko"
+        type: string
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'cryptic-stack'
+    env:
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKERHUB_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+      REPOSITORY: ${{ inputs.repository }}
+    steps:
+      - name: Validate confirmation
+        run: |
+          set -euo pipefail
+          if [ "${{ inputs.confirm }}" != "PURGE" ]; then
+            echo "Confirmation mismatch. Refusing to purge."
+            exit 1
+          fi
+          if [ -z "${DOCKERHUB_USERNAME}" ] || [ -z "${DOCKERHUB_TOKEN}" ]; then
+            echo "Missing DOCKERHUB_USERNAME and/or DOCKER_TOKEN secret."
+            exit 1
+          fi
+
+      - name: Login to Docker Hub API
+        id: login
+        run: |
+          set -euo pipefail
+          TOKEN="$(
+            curl -fsSL -X POST "https://hub.docker.com/v2/users/login/" \
+              -H "Content-Type: application/json" \
+              -d "{\"username\":\"${DOCKERHUB_USERNAME}\",\"password\":\"${DOCKERHUB_TOKEN}\"}" \
+            | jq -r '.token'
+          )"
+          if [ -z "${TOKEN}" ] || [ "${TOKEN}" = "null" ]; then
+            echo "Unable to get Docker Hub JWT."
+            exit 1
+          fi
+          echo "token=${TOKEN}" >> "$GITHUB_OUTPUT"
+
+      - name: Purge all tags
+        run: |
+          set -euo pipefail
+          AUTH_HEADER="Authorization: JWT ${{ steps.login.outputs.token }}"
+          BASE="https://hub.docker.com/v2/repositories/${DOCKERHUB_USERNAME}/${REPOSITORY}/tags?page_size=100"
+          URL="${BASE}"
+          DELETED=0
+
+          while [ -n "${URL}" ] && [ "${URL}" != "null" ]; do
+            RESP="$(curl -fsSL -H "${AUTH_HEADER}" "${URL}")"
+            TAGS="$(echo "${RESP}" | jq -r '.results[].name')"
+
+            for TAG in ${TAGS}; do
+              echo "Deleting tag: ${TAG}"
+              curl -fsSL -X DELETE -H "${AUTH_HEADER}" \
+                "https://hub.docker.com/v2/repositories/${DOCKERHUB_USERNAME}/${REPOSITORY}/tags/${TAG}/" \
+                >/dev/null
+              DELETED=$((DELETED + 1))
+            done
+
+            URL="$(echo "${RESP}" | jq -r '.next')"
+          done
+
+          echo "Deleted tags: ${DELETED}"
