@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/m1k1o/neko/server/pkg/types"
-	"github.com/m1k1o/neko/server/pkg/utils"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types"
+	"github.com/cryptic-stack/octal-neko/server/pkg/utils"
 )
 
 type MemberDataPayload struct {

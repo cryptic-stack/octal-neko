@@ -6,8 +6,8 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/m1k1o/neko/server/pkg/types"
-	"github.com/m1k1o/neko/server/pkg/xevent"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types"
+	"github.com/cryptic-stack/octal-neko/server/pkg/xevent"
 )
 
 const (

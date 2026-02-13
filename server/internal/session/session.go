@@ -6,8 +6,8 @@ import (
 
 	"github.com/rs/zerolog"
 
-	"github.com/m1k1o/neko/server/pkg/types"
-	"github.com/m1k1o/neko/server/pkg/types/event"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types/event"
 )
 
 // client is expected to reconnect within 5 second

@@ -1,9 +1,9 @@
 package websocket
 
 import (
-	"github.com/m1k1o/neko/server/pkg/types"
-	"github.com/m1k1o/neko/server/pkg/types/event"
-	"github.com/m1k1o/neko/server/pkg/types/message"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types/event"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types/message"
 )
 
 func (manager *WebSocketManagerCtx) fileChooserDialogEvents() {

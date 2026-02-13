@@ -11,9 +11,9 @@ import (
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/viper"
 
-	"github.com/m1k1o/neko/server/internal/config"
-	"github.com/m1k1o/neko/server/internal/http/legacy"
-	"github.com/m1k1o/neko/server/pkg/types"
+	"github.com/cryptic-stack/octal-neko/server/internal/config"
+	"github.com/cryptic-stack/octal-neko/server/internal/http/legacy"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types"
 )
 
 type HttpManagerCtx struct {

@@ -7,15 +7,15 @@ import (
 
 	"github.com/pion/webrtc/v3"
 
-	oldEvent "github.com/m1k1o/neko/server/internal/http/legacy/event"
-	oldMessage "github.com/m1k1o/neko/server/internal/http/legacy/message"
+	oldEvent "github.com/cryptic-stack/octal-neko/server/internal/http/legacy/event"
+	oldMessage "github.com/cryptic-stack/octal-neko/server/internal/http/legacy/message"
 
-	"github.com/m1k1o/neko/server/internal/api/room"
-	"github.com/m1k1o/neko/server/internal/plugins/chat"
-	"github.com/m1k1o/neko/server/internal/plugins/filetransfer"
-	"github.com/m1k1o/neko/server/pkg/types"
-	"github.com/m1k1o/neko/server/pkg/types/event"
-	"github.com/m1k1o/neko/server/pkg/types/message"
+	"github.com/cryptic-stack/octal-neko/server/internal/api/room"
+	"github.com/cryptic-stack/octal-neko/server/internal/plugins/chat"
+	"github.com/cryptic-stack/octal-neko/server/internal/plugins/filetransfer"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types/event"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types/message"
 )
 
 func (s *session) wsToBackend(msg []byte) error {

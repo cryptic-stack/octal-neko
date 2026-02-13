@@ -1,7 +1,7 @@
 package filetransfer
 
 import (
-	"github.com/m1k1o/neko/server/pkg/types"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types"
 )
 
 type Plugin struct {

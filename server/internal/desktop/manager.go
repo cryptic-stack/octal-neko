@@ -10,11 +10,11 @@ import (
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 
-	"github.com/m1k1o/neko/server/internal/config"
-	"github.com/m1k1o/neko/server/pkg/types"
-	"github.com/m1k1o/neko/server/pkg/xevent"
-	"github.com/m1k1o/neko/server/pkg/xinput"
-	"github.com/m1k1o/neko/server/pkg/xorg"
+	"github.com/cryptic-stack/octal-neko/server/internal/config"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types"
+	"github.com/cryptic-stack/octal-neko/server/pkg/xevent"
+	"github.com/cryptic-stack/octal-neko/server/pkg/xinput"
+	"github.com/cryptic-stack/octal-neko/server/pkg/xorg"
 )
 
 var mu = sync.Mutex{}

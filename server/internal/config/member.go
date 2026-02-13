@@ -5,11 +5,11 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/m1k1o/neko/server/internal/member/file"
-	"github.com/m1k1o/neko/server/internal/member/multiuser"
-	"github.com/m1k1o/neko/server/internal/member/object"
-	"github.com/m1k1o/neko/server/pkg/types"
-	"github.com/m1k1o/neko/server/pkg/utils"
+	"github.com/cryptic-stack/octal-neko/server/internal/member/file"
+	"github.com/cryptic-stack/octal-neko/server/internal/member/multiuser"
+	"github.com/cryptic-stack/octal-neko/server/internal/member/object"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types"
+	"github.com/cryptic-stack/octal-neko/server/pkg/utils"
 )
 
 type Member struct {

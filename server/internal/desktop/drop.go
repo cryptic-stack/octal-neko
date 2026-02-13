@@ -3,7 +3,7 @@ package desktop
 import (
 	"time"
 
-	"github.com/m1k1o/neko/server/pkg/drop"
+	"github.com/cryptic-stack/octal-neko/server/pkg/drop"
 )
 
 // repeat move event multiple times

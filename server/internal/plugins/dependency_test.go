@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/m1k1o/neko/server/pkg/types"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types"
 )
 
 func Test_deps_addPlugin(t *testing.T) {

@@ -16,7 +16,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/m1k1o/neko/server/pkg/types"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types"
 )
 
 //go:generate ./keysymdef.sh

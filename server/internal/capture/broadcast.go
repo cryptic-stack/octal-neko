@@ -8,8 +8,8 @@ import (
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 
-	"github.com/m1k1o/neko/server/pkg/gst"
-	"github.com/m1k1o/neko/server/pkg/types"
+	"github.com/cryptic-stack/octal-neko/server/pkg/gst"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types"
 )
 
 type BroacastManagerCtx struct {

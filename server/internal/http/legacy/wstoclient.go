@@ -8,15 +8,15 @@ import (
 	"github.com/pion/webrtc/v3"
 	"github.com/spf13/viper"
 
-	oldEvent "github.com/m1k1o/neko/server/internal/http/legacy/event"
-	oldMessage "github.com/m1k1o/neko/server/internal/http/legacy/message"
-	oldTypes "github.com/m1k1o/neko/server/internal/http/legacy/types"
+	oldEvent "github.com/cryptic-stack/octal-neko/server/internal/http/legacy/event"
+	oldMessage "github.com/cryptic-stack/octal-neko/server/internal/http/legacy/message"
+	oldTypes "github.com/cryptic-stack/octal-neko/server/internal/http/legacy/types"
 
-	"github.com/m1k1o/neko/server/internal/plugins/chat"
-	"github.com/m1k1o/neko/server/internal/plugins/filetransfer"
-	"github.com/m1k1o/neko/server/pkg/types"
-	"github.com/m1k1o/neko/server/pkg/types/event"
-	"github.com/m1k1o/neko/server/pkg/types/message"
+	"github.com/cryptic-stack/octal-neko/server/internal/plugins/chat"
+	"github.com/cryptic-stack/octal-neko/server/internal/plugins/filetransfer"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types/event"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types/message"
 )
 
 func profileToMember(id string, profile types.MemberProfile) (*oldTypes.Member, error) {

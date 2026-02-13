@@ -12,15 +12,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/m1k1o/neko/server/internal/api"
-	oldEvent "github.com/m1k1o/neko/server/internal/http/legacy/event"
-	oldMessage "github.com/m1k1o/neko/server/internal/http/legacy/message"
-	oldTypes "github.com/m1k1o/neko/server/internal/http/legacy/types"
+	"github.com/cryptic-stack/octal-neko/server/internal/api"
+	oldEvent "github.com/cryptic-stack/octal-neko/server/internal/http/legacy/event"
+	oldMessage "github.com/cryptic-stack/octal-neko/server/internal/http/legacy/message"
+	oldTypes "github.com/cryptic-stack/octal-neko/server/internal/http/legacy/types"
 
-	"github.com/m1k1o/neko/server/pkg/types"
-	"github.com/m1k1o/neko/server/pkg/types/event"
-	"github.com/m1k1o/neko/server/pkg/types/message"
-	"github.com/m1k1o/neko/server/pkg/utils"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types/event"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types/message"
+	"github.com/cryptic-stack/octal-neko/server/pkg/utils"
 
 	"github.com/gorilla/websocket"
 	"github.com/rs/zerolog"

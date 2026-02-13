@@ -7,7 +7,7 @@ import (
 	"path"
 	"strconv"
 
-	"github.com/m1k1o/neko/server/pkg/utils"
+	"github.com/cryptic-stack/octal-neko/server/pkg/utils"
 )
 
 // TODO: Extract file uploading to custom utility.

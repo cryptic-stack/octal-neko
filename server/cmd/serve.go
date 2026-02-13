@@ -9,16 +9,16 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/m1k1o/neko/server/internal/api"
-	"github.com/m1k1o/neko/server/internal/capture"
-	"github.com/m1k1o/neko/server/internal/config"
-	"github.com/m1k1o/neko/server/internal/desktop"
-	"github.com/m1k1o/neko/server/internal/http"
-	"github.com/m1k1o/neko/server/internal/member"
-	"github.com/m1k1o/neko/server/internal/plugins"
-	"github.com/m1k1o/neko/server/internal/session"
-	"github.com/m1k1o/neko/server/internal/webrtc"
-	"github.com/m1k1o/neko/server/internal/websocket"
+	"github.com/cryptic-stack/octal-neko/server/internal/api"
+	"github.com/cryptic-stack/octal-neko/server/internal/capture"
+	"github.com/cryptic-stack/octal-neko/server/internal/config"
+	"github.com/cryptic-stack/octal-neko/server/internal/desktop"
+	"github.com/cryptic-stack/octal-neko/server/internal/http"
+	"github.com/cryptic-stack/octal-neko/server/internal/member"
+	"github.com/cryptic-stack/octal-neko/server/internal/plugins"
+	"github.com/cryptic-stack/octal-neko/server/internal/session"
+	"github.com/cryptic-stack/octal-neko/server/internal/webrtc"
+	"github.com/cryptic-stack/octal-neko/server/internal/websocket"
 )
 
 func init() {

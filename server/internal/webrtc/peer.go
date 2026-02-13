@@ -11,11 +11,11 @@ import (
 	"github.com/pion/webrtc/v3"
 	"github.com/rs/zerolog"
 
-	"github.com/m1k1o/neko/server/internal/config"
-	"github.com/m1k1o/neko/server/internal/webrtc/payload"
-	"github.com/m1k1o/neko/server/pkg/types"
-	"github.com/m1k1o/neko/server/pkg/types/event"
-	"github.com/m1k1o/neko/server/pkg/utils"
+	"github.com/cryptic-stack/octal-neko/server/internal/config"
+	"github.com/cryptic-stack/octal-neko/server/internal/webrtc/payload"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types/event"
+	"github.com/cryptic-stack/octal-neko/server/pkg/utils"
 )
 
 type WebRTCPeerCtx struct {

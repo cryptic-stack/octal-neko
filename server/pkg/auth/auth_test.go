@@ -6,9 +6,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/m1k1o/neko/server/internal/config"
-	"github.com/m1k1o/neko/server/internal/session"
-	"github.com/m1k1o/neko/server/pkg/types"
+	"github.com/cryptic-stack/octal-neko/server/internal/config"
+	"github.com/cryptic-stack/octal-neko/server/internal/session"
+	"github.com/cryptic-stack/octal-neko/server/pkg/types"
 )
 
 var i = 0
