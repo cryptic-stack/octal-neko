@@ -29,26 +29,29 @@ for v in data['vendors'].values():
 # Download CRX
 curl -L -o widevinecdm.crx "$URL"
 
-# Install go-crx3
-GO_CRX3_TAG="${GO_CRX3_TAG:-}"
-if [ -z "$GO_CRX3_TAG" ]; then
-    echo "Resolving latest go-crx3 release tag..."
-    GO_CRX3_TAG="$(curl -fsSL https://api.github.com/repos/m1k1o/go-crx3/releases/latest | jq -r '.tag_name // empty' || true)"
-fi
-if [ -z "$GO_CRX3_TAG" ]; then
-    GO_CRX3_TAG="v1.6.1"
-    echo "Could not resolve latest go-crx3 tag, using fallback tag: $GO_CRX3_TAG"
-fi
+# Unpack CRX3 payload (zip archive) without external tools.
+python3 - <<'PY'
+import struct
 
-GO_CRX3_VERSION="${GO_CRX3_TAG#v}"
-GO_CRX3_ARTIFACT="go-crx3_${GO_CRX3_VERSION}_linux_amd64.tar.gz"
-GO_CRX3_URL="https://github.com/m1k1o/go-crx3/releases/download/${GO_CRX3_TAG}/${GO_CRX3_ARTIFACT}"
+with open("widevinecdm.crx", "rb") as src:
+    magic = src.read(4)
+    if magic != b"Cr24":
+        raise SystemExit("unsupported CRX format: missing Cr24 header")
+    version = struct.unpack("<I", src.read(4))[0]
+    if version != 3:
+        raise SystemExit(f"unsupported CRX version: {version}")
+    header_len = struct.unpack("<I", src.read(4))[0]
+    src.seek(12 + header_len)
+    payload = src.read()
 
-echo "Downloading $GO_CRX3_URL"
-curl -fL -o go-crx3.tar.gz "$GO_CRX3_URL"
-tar -xzf go-crx3.tar.gz
+with open("widevinecdm.zip", "wb") as dst:
+    dst.write(payload)
+PY
 
-# Unpack with go-crx3
-./go-crx3 unpack widevinecdm.crx
+python3 - <<'PY'
+import zipfile
+zipfile.ZipFile("widevinecdm.zip").extractall("widevinecdm")
+PY
+
 mkdir -p "$TARGET_DIR"
 cp -ar widevinecdm/* "$TARGET_DIR"

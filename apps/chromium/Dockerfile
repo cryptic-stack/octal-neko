@@ -4,7 +4,7 @@ FROM $BASE_IMAGE
 COPY ./widevinecdm.sh /widevine.sh
 
 #
-# install neko chromium
+# install octal chromium
 RUN set -eux; \
     echo "deb http://ftp.de.debian.org/debian bookworm main" >> /etc/apt/sources.list; \
     apt-get update; \

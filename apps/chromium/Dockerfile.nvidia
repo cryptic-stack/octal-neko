@@ -4,11 +4,11 @@ FROM $BASE_IMAGE
 COPY ./widevinecdm.sh /widevine.sh
 
 #
-# install neko chromium
+# install octal chromium
 RUN set -eux; \
     apt-get update; \
     apt-get install -y --no-install-recommends software-properties-common; \
-    #Â chromium-browser from default repo needs snap to be installed
+    #Ã‚Â chromium-browser from default repo needs snap to be installed
     # and nvidia base is ubuntu not debian
     add-apt-repository ppa:system76/pop; \
     apt-get update; \

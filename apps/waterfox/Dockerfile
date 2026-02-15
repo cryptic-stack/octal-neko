@@ -28,7 +28,7 @@ RUN set -eux; apt-get update; \
 #
 # copy configuation files
 COPY supervisord.conf /etc/neko/supervisord/waterfox.conf
-COPY neko.js /usr/lib/waterfox/mozilla.cfg
+COPY octal.js /usr/lib/waterfox/mozilla.cfg
 COPY autoconfig.js /usr/lib/waterfox/defaults/pref/autoconfig.js
 COPY policies.json /usr/lib/waterfox/distribution/policies.json
 COPY --chown=octal profiles.ini /home/octal/.waterfox/profiles.ini

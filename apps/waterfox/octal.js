@@ -1,4 +1,4 @@
-// firefox config for neko
+// firefox config for octal
 lockPref("browser.tabs.closeWindowWithLastTab", false);
 lockPref("app.update.auto", false);
 lockPref("app.update.enabled", false);

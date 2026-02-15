@@ -29,16 +29,29 @@ for v in data['vendors'].values():
 # Download CRX
 curl -L -o widevinecdm.crx "$URL"
 
-# Install go-crx3
-echo "Fetching latest go-crx3 version..."
-VERSION=$(curl -s https://api.github.com/repos/m1k1o/go-crx3/releases/latest | grep 'tag_name' | cut -d '"' -f4)
-ARTIFACT="go-crx3_${VERSION#v}_linux_amd64.tar.gz"
-URL="https://github.com/m1k1o/go-crx3/releases/download/${VERSION}/${ARTIFACT}"
-echo "Downloading $URL"
-curl -L -o "$ARTIFACT" "$URL"
-tar -xzf "$ARTIFACT"
+# Unpack CRX3 payload (zip archive) without external tools.
+python3 - <<'PY'
+import struct
 
-# Unpack with go-crx3
-./go-crx3 unpack widevinecdm.crx
+with open("widevinecdm.crx", "rb") as src:
+    magic = src.read(4)
+    if magic != b"Cr24":
+        raise SystemExit("unsupported CRX format: missing Cr24 header")
+    version = struct.unpack("<I", src.read(4))[0]
+    if version != 3:
+        raise SystemExit(f"unsupported CRX version: {version}")
+    header_len = struct.unpack("<I", src.read(4))[0]
+    src.seek(12 + header_len)
+    payload = src.read()
+
+with open("widevinecdm.zip", "wb") as dst:
+    dst.write(payload)
+PY
+
+python3 - <<'PY'
+import zipfile
+zipfile.ZipFile("widevinecdm.zip").extractall("widevinecdm")
+PY
+
 mkdir -p "$TARGET_DIR"
 cp -ar widevinecdm/* "$TARGET_DIR"

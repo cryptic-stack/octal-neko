@@ -49,7 +49,7 @@ RUN set -eux; apt-get update; \
 #
 # copy configuation files
 COPY supervisord.conf /etc/neko/supervisord/firefox.conf
-COPY neko.js /usr/lib/firefox/mozilla.cfg
+COPY octal.js /usr/lib/firefox/mozilla.cfg
 COPY autoconfig.js /usr/lib/firefox/defaults/pref/autoconfig.js
 COPY policies.json /usr/lib/firefox/distribution/policies.json
 COPY --chown=octal profiles.ini /home/octal/.mozilla/firefox/profiles.ini
